@@ -1,0 +1,148 @@
+/* Modern CSS Reset with Variables */
+
+/* Root variables */
+:root {
+  /* Background Colors */
+  --bg-dark: #0e100f;
+  --bg-orange: #fc8608;
+  --bg-white: #fefce1;
+  --bg-gold: #d1b06b;
+
+  /* Text Colors */
+  --text-dark: #0e100f;
+  --text-orange: #fc8608;
+  --text-white-1: #fefce1;
+  --text-white-2: #d8d6bf;
+  --text-gold: #d1b06b;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem; /* 4px */
+  --spacing-sm: 0.5rem; /* 8px */
+  --spacing-md: 1rem; /* 16px */
+  --spacing-lg: 1.5rem; /* 24px */
+  --spacing-xl: 2rem; /* 32px */
+  --spacing-2xl: 2.5rem; /* 40px */
+
+  /* Font sizes */
+  --text-xs: 0.75rem; /* 12px */
+  --text-sm: 0.875rem; /* 14px */
+  --text-base: 1rem; /* 16px */
+  --text-lg: 1.125rem; /* 18px */
+  --text-xl: 1.25rem; /* 20px */
+  --text-2xl: 1.5rem; /* 24px */
+  --text-3xl: 2rem; /*32px*/
+  --text-4xl: 2.5rem; /*40px*/
+
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+
+  /* Border radius */
+  --radius-xs: 0.25rem; /* 4px */
+  --radius-sm: 0.375rem; /* 6px */
+  --radius-md: 0.5rem; /* 8px */
+  --radius-lg: 1rem; /* 16px */
+  --radius-xl: 1.5rem; /* 24px */
+  --radius-2xl: 2rem; /*32px*/
+  --radius-3xl: 2.5rem; /*40px*/
+  --radius-4xl: 3rem; /*48px*/
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+
+  /* Transitions */
+  --transition-base: 200ms ease-in-out;
+  --transition-slow: 300ms ease-in-out;
+  --transition-fast: 100ms ease-in-out;
+}
+
+/* Box sizing for all elements */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Responsive Images*/
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Remove underline on links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Form elements styling */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: none;
+}
+
+.btn--transparent {
+  background-color: transparent;
+  border: 1px solid var(--text-orange);
+  border-radius: 3rem;
+  color: var(--text-orange);
+  padding: var(--spacing-md) var(--spacing-2xl);
+}
+.btn--primary {
+  background-color: var(--bg-orange);
+  border: none;
+  border-radius: 3rem;
+  color: var(--text-dark);
+  padding: var(--spacing-md) var(--spacing-2xl);
+}
